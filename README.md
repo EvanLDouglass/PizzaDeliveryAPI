@@ -20,7 +20,7 @@ You can modify or contribute to this project by following the steps below:
 
 This should be enough to run the server locally. If you saved the environment variables above in your terminal environment (such as in a .bashrc file), run the command
 
-    ~$ mvn spring-boot:run
+    mvn spring-boot:run
 
 If you saved the variables in your editor environment (i.e. the IntelliJ Run/Debug Configurations), run the main application using the appropriate process for your set-up.
 
@@ -34,20 +34,20 @@ This project uses the lombok library in some of the model classes to cut down on
 
 We use maven as our build tool for this project. Once you have your dev environment set up, you can run tests on the terminal with
 
-    ~$ mvn verify
+    mvn verify
 
 or another maven test command. `mvn validate` and `mvn test` also seem to work.
 
 We also use Jacoco to measure our test coverage. The above command should run the Jacoco report, but if you prefer to only run the report use the following command:
 
-    ~$ mvn jacoco:report
+    mvn jacoco:report
 
 Open the report by finding the jacoco HTML under project-root/target/site/jacoco/index.html, then open in your browser.
 
 The following commands may come in handy if Jacoco doesn't seem to be working.
 
-    ~$ mvn clean install
-    ~$ jacoco:prepare-agent jacoco:report
+    mvn clean install
+    jacoco:prepare-agent jacoco:report
 
 ## Creating a Heroku App
 
@@ -57,9 +57,19 @@ Heroku has extensive documentation on how to create apps on their platform. Star
 
 Once your app is set-up you will have to connect it with the Heroku managed [mLab MongoDB](https://elements.heroku.com/addons/mongolab) add-on. Once installed this will automatically set-up your config (i.e. environment) variable for your mongodb uri. Be sure to confirm that the variable is MONGODB_URI. You can find this under the settings tab in your app's dashboard. You will also have to create the the MONGODB_DBNAME variable using the database name that mLab gives you. You can retrieve this by visiting the mLab environment. From the terminal (in the project's root directory):
 
-    ~$ heroku addons:open mongolab
+    heroku addons:open mongolab
 
 Visit your app's Heroku URI to confirm that the code is working.
+
+## Aditional Links
+
+* [API Design Document](https://docs.google.com/document/d/1VT129qyGoOdomH7Tf5sAYlCeG8k6NaDW2la20wl8cr0/edit?usp=sharing)
+* [Front-End Design Document](https://docs.google.com/document/d/1lrQyhTi0gaAmdOinhy5wW4dZHJS67hM00_NBbN3XDJw/edit?usp=sharing)
+* [Front-End Site](https://dijkstras.glitch.me/)
+   * Note that it may take several minutes to wake up if the app went to sleep
+* [Final Report](https://docs.google.com/document/d/1cCOTvZzgRdxYNTtBPZxlpfJgtCa6RhCOX9BkwrWvoPg/edit?usp=sharing)
+* [Final Video Presentation](https://www.youtube.com/watch?v=HArcqHPqX6o&feature=youtu.be)
+* [Trello Board](https://trello.com/b/SfyH7Dce/dijkstras-pizza-scrum-board)
 
 ---
 
